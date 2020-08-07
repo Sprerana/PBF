@@ -1,0 +1,4282 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	
+	<script src="{% static 'login_pop_js.js' %}"></script>
+	
+	<link rel="stylesheet" href="{% static 'login_pop_css.css' %}">
+
+
+</head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="">
+
+<meta name="author" content="">
+
+<title>Swayam Central</title>
+
+<!-- Swayam CSS -->
+
+<link href="https://storage.googleapis.com/swayam2_central/assets/css/swayam_css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://storage.googleapis.com/swayam2_central/assets/css/swayam_css/main.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Restrict CSS/JS loading from external CDN. Reverting to cloudflare as its not working from our CDN. Check this later -->
+
+<!--link rel="stylesheet" href="https://storage.googleapis.com/swayam2_central/assets/css/swayam_css/font-awesome.min.css" -->
+
+
+
+<!-- Swayam JS -->
+
+<script src="https://storage.googleapis.com/swayam2_central/assets/js/swayam_js/jquery.js"></script>
+
+<script src="https://storage.googleapis.com/swayam2_central/assets/js/swayam_js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+var idleTime = 0;
+
+$(document).ready(function () {
+
+//Increment the idle time counter every minute.
+
+var currentUserEmail = 'None'
+
+
+
+if (currentUserEmail != "None"){
+
+var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+
+}
+
+
+
+
+
+//Zero the idle timer on mouse movement.
+
+$(this).mousemove(function (e) {
+
+idleTime = 0;
+
+});
+
+$(this).keypress(function (e) {
+
+idleTime = 0;
+
+});
+
+});
+
+
+
+function timerIncrement() {
+
+idleTime = idleTime + 1;
+
+
+
+if (idleTime > 119) { // 120 minutes
+
+window.location.replace("https://swayam.gov.in/_ah/logout?continue=https://accounts.google.com/Logout%3Fcontinue%3Dhttps://appengine.google.com/_ah/logout%253Fcontinue%253Dhttps://google.com/url%25253Fsa%25253DD%252526q%25253Dhttps://swayam.gov.in/%252526ust%25253D1586013693419566%252526usg%25253DAFQjCNE4o0qaFclPHaNZVw6RT8iTxQfZKg%26service%3Dah");
+
+}
+
+}
+
+</script>
+
+</head>
+
+<body class="homepage">
+
+<header id="header">
+
+<!--Top Bar [START]-->
+
+<div class="top-bar">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-sm-3 col-xs-12 top-left">
+
+<a class="navbar-brand" href="/">
+
+<img src="{% static 'logo.png' %}" alt="swayam-logo">
+
+</a>
+
+&nbsp; &nbsp; &nbsp;
+
+
+
+</div>
+
+<div class="col-sm-9 col-xs-12">
+
+<div class="top-navigation">
+
+<!--<a href="/about">About Swayam</a> |
+
+<a href="/explorer">All Courses</a> |
+
+<a href="/nc_details/">National Coordinators</a> |
+
+<a href="https://nptel.ac.in/LocalChapter/">Local Chapters</a>-->
+
+<!--<a href="swayam_universities">Universities</a> |-->
+
+<!--<a href="swayam_institutes">Institutes</a> |-->
+
+<!--<a href="swayam_instructors">Instructors</a>-->
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!--Top Bar [END]-->
+
+
+
+<!--Menu Container [START]-->
+
+<div class="container">
+
+<div class="row">
+
+<nav class="navbar navbar-default">
+
+<div class="container-fluid">
+
+<!--Mobile + Brand Logo [START]-->
+
+<div class="navbar-header">
+
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+
+data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+<span class="sr-only">Toggle navigation</span>
+
+<span class="icon-bar"></span>
+
+<span class="icon-bar"></span>
+
+<span class="icon-bar"></span>
+
+</button>
+
+</div>
+
+<!--Mobile + Brand Logo [END]-->
+
+
+
+<!--Main Menu [START]-->
+
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+<ul class="nav navbar-nav navbar-right">
+
+<li class="dropdown">
+
+<a href="/explorer" class="dropdown-toggle" data-toggle="dropdown">
+
+<b>PLANNING,BUDGETING AND FORECASTING </b><!--<i class="fa fa-angle-down">--></i>
+
+</a>
+
+<div class="dropdown-menu" role="list" style="width: 240px;">
+
+<div class="megamenuWrapper">
+
+<div><a href="/explorer">All</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=AICTE_NITTT">AICTE - NITTT - Courses </a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=ARPIT">Annual Refresher Programme in Teaching (ARPIT)</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=ARCHI_COURSES">Architecture and Planning</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown-submenu">
+
+<a class="submenu" href="#">Education &nbsp; <i class="fa fa-angle-down"></i></a>
+
+<div class="dropdown-menu" role="list" style="display: none;">
+
+<div class="megamenuWrapper">
+
+<div><a href="/explorer?category=Education">All</a></div>
+
+<div><a href="/explorer?category=TEACHER_EDUCATION">Teacher Education</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown-submenu">
+
+<a class="submenu" href="#">Engineering and Technology &nbsp; <i class="fa fa-angle-down"></i></a>
+
+<div class="dropdown-menu" role="list" style="display: none;">
+
+<div class="megamenuWrapper">
+
+<div><a href="/explorer?category=Engineering_and_Technology">All</a></div>
+
+<div><a href="/explorer?category=AERO_COURSES">Aerospace Engineering</a></div>
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=AGRI_COURSES">Agricultural and Food Engineering</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=BIO_TECH">Biological Sciences &amp; Bioengineering</a></div>
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=CHEMICAL_COURSES">Chemical Engineering</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=CIVIL_ENGINEERING">Civil Engineering</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=COMP_SCI_ENGG">Computer Science and Engineering</a></div>
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=DESIGN_COURSES">Design Engineering</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=ELEC_ENGG">Electrical, Electronics and Communications Engineering</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=MECH_ENGG">Mechanical Engineering</a></div>
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=METALLURGY_COURSES">Metallurgy and Material science &amp; Mining Engineering</a></div>
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=Multidisciplinary">Multidisciplinary</a></div>
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=OCEAN_COURSES">Ocean Engineering</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=TEXTILE_COURSES">Textile Engineering</a></div>
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown-submenu">
+
+<a class="submenu" href="#">Humanities &amp; Arts &nbsp; <i class="fa fa-angle-down"></i></a>
+
+<div class="dropdown-menu" role="list" style="display: none;">
+
+<div class="megamenuWrapper">
+
+<div><a href="/explorer?category=Humanities_and_Arts">All</a></div>
+
+<div><a href="/explorer?category=Arts">Arts</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=Humanities_and_Social_Sciences">Humanities and Social Sciences</a></div>
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=Language">Language</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=Law">Law</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown-submenu">
+
+<a class="submenu" href="#">Management &amp; Commerce &nbsp; <i class="fa fa-angle-down"></i></a>
+
+<div class="dropdown-menu" role="list" style="display: none;">
+
+<div class="megamenuWrapper">
+
+<div><a href="/explorer?category=Management_and_Commerce">All</a></div>
+
+<div><a href="/explorer?category=Commerce">Commerce</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=Management">Management Studies</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown-submenu">
+
+<a class="submenu" href="#">Maths &amp; Sciences &nbsp; <i class="fa fa-angle-down"></i></a>
+
+<div class="dropdown-menu" role="list" style="display: none;">
+
+<div class="megamenuWrapper">
+
+<div><a href="/explorer?category=Math_and_Sciences">All</a></div>
+
+<div><a href="/explorer?category=Applied_Sciences">Applied Sciences</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=Chemistry">Chemistry</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=Earth_Sciences">Earth Sciences</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=Environmental_Sciences">Environmental Sciences</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=Library_and_Information_Sciences">Library and Information Sciences</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=Mathematics">Mathematics</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=Physics">Physics</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="/explorer?category=SCHOOL">School</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</li>
+
+<!--<li><a href="#">GOI PROGRAMS <i class="fa fa-angle-down"></i></a></li>-->
+
+<li>
+
+<form class="form-search" action="/explorer">
+
+<div class="form-group search">
+
+<!--<input id="header-search-query" name="searchText" type="text" class="input-medium search-query"
+
+placeholder="Search Catalog..." value="">-->
+
+<!--<span class="search_keyword" onclick="redirectToCatalogWithSearchQuery(event)">-->
+
+<!--<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/icon_search_16px.png">-->
+
+</span>
+
+</div>
+
+</form>
+
+</li>
+
+
+
+<li>
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    {% csrf_token %}
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+    </div>
+
+   <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="username" name="username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="password" name="password" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+
+<!--<button type="submit" name="submit" class="btn btn-primary btn-lg" style="margin: 0px;">
+
+SIGN IN
+
+</button>-->
+
+</a>
+
+</li>
+
+<!--<li>-->
+
+<!--<a href="#" style="padding-top:0px">-->
+
+<!--<button type="submit" name="submit" class="btn btn-primary btn-lg" disabled style="filter: grayscale(100%); margin:0px">Sign Up</button>-->
+
+<!--</a>-->
+
+<!--</li>-->
+
+
+
+</ul>
+
+</div>
+
+<!--Main Menu [END]-->
+
+</div>
+
+</nav>
+
+</div>
+
+</div>
+
+<!--Menu Container [END]-->
+
+</header>
+
+
+
+<script>
+
+function redirectToCatalogWithSearchQuery(event) {
+
+// Proceed only if user clicks on Search icon
+
+if (event.type == "click") {
+
+document.location = "/explorer?searchText=" + document.getElementById('header-search-query').value;
+
+}
+
+}
+
+</script>
+
+
+
+<section>
+
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+<!-- Indicators -->
+
+<ol class="carousel-indicators">
+
+<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+<li data-target="#myCarousel" data-slide-to="1"></li>
+
+<li data-target="#myCarousel" data-slide-to="2"></li>
+
+</ol>
+
+
+
+<!-- Wrapper for slides -->
+
+<div class="carousel-inner">
+
+
+
+<div class="item active" style="background:#0099cc; min-height:300px;">
+
+<div class="container">
+
+<div class="row">
+
+
+
+<div class="col-lg-7 col-md-7 col-sm-5 col-xs-12 visible-lg visible-md">
+
+<div class="carouselh1"></div>
+
+<div class="carouselh2">  <br />
+
+</div>
+
+<!--<a href="/swayam_learner">-->
+
+<!--<button class="btn btn-outline5 btn-lg">Find Out More</button>-->
+
+<!--</a>-->
+
+<a href="/explorer">
+
+<!--<button class="btn btn-outline5 btn-lg"></button>-->
+
+</a>
+
+</div>
+
+<div class="col-lg-7 col-md-7 col-sm-5 col-xs-12 visible-sm visible-xs smallMobileAnnouncement">
+
+<div class="mcarouselh1"> </div>
+
+<div class="mcarouselh2"><br />
+
+</div>
+
+<!--<a href="/swayam_learner">-->
+
+<!--<button class="btn btn-outline5 btn-lg">Find Out More</button>-->
+
+<!--</a>-->
+
+<!--<a href="/explorer">-->
+
+<!--<button class="btn btn-outline5 btn-lg">Explore Courses</button>-->
+
+<!--</a>-->
+
+</div>
+
+<div class="col-lg-5 col-md-5 col-sm-7 col-xs-12 visible-lg visible-md" style="margin-top:10px; height:350px; background:url(/static/for.png) bottom no-repeat" > </div>
+
+<div class="col-lg-5 col-md-5 col-sm-7 col-xs-12 visible-sm" style="margin-top:10px; height:300px; background:url(/static/money.png) bottom no-repeat"> </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="item" style=" background:#22AA55; min-height:300px;">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-7 col-md-7 col-sm-5 col-xs-12 visible-lg visible-md">
+
+<div class="carouselh1">For Faculty...</div>
+
+<div class="carouselh2"> Faculty Development and <br />
+
+Student Mentoring</div>
+
+<!--<a href="/swayam_faculty">-->
+
+<!--<button class="btn btn-outline5 btn-lg">Find Out More</button>-->
+
+<!--</a>-->
+
+</div>
+
+<div class="col-lg-7 col-md-7 col-sm-5 col-xs-12 visible-sm visible-xs smallMobileAnnouncement">
+
+<div class="mcarouselh1"> For Faculty... </div>
+
+<div class="mcarouselh2"> Faculty Development and <br />
+
+Student Mentoring</div>
+
+<!--<a href="/swayam_faculty">-->
+
+<!--<button class="btn btn-outline5 btn-lg">Find Out More</button>-->
+
+<!--</a>-->
+
+</div>
+
+<div class="col-lg-5 col-md-5 col-sm-7 col-xs-12 visible-lg visible-md" style="margin-top:10px; height:350px; background:url(https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/Slider/banner_2_480.png) bottom no-repeat" ><img src="{% static 'money.png' %}" alt="swayam-logo"></div>
+
+<div class="col-lg-5 col-md-5 col-sm-7 col-xs-12 visible-sm" style="margin-top:10px; height:300px; background:url() bottom no-repeat" > </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="item" style=" background:#FF9933; min-height:300px;">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-7 col-md-7 col-sm-5 col-xs-12 visible-lg visible-md">
+
+<div class="carouselh1">For Administrators...</div>
+
+<div class="carouselh2"> Interface with SWAYAM <br/>
+
+as a Local Chapter</div>
+
+<!--<a href="/swayam_administrator">-->
+
+<!--<button class="btn btn-outline5 btn-lg">Find Out More</button>-->
+
+<!--</a>-->
+
+</div>
+
+<div class="col-lg-7 col-md-7 col-sm-5 col-xs-12 visible-sm visible-xs smallMobileAnnouncement">
+
+<div class="mcarouselh1"> For Administrators... </div>
+
+<div class="mcarouselh2"> Interface with SWAYAM <br />
+
+as a Local Chapter</div>
+
+<!--<a href="/swayam_administrator">-->
+
+<!--<button class="btn btn-outline5 btn-lg">Find Out More</button>-->
+
+<!--</a>-->
+
+</div>
+
+<div class="col-lg-5 col-md-5 col-sm-7 col-xs-12 visible-lg visible-md" style="margin-top:10px; height:350px; background:url(https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/Slider/banner_3_480.png) bottom no-repeat" > </div>
+
+<div class="col-lg-5 col-md-5 col-sm-7 col-xs-12 visible-sm" style="margin-top:10px; height:300px; background:url(https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/Slider/banner_3_420.png) bottom no-repeat" > </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+<!-- Left and right controls -->
+
+<a class="left carousel-control hidden-xs" href="#myCarousel" data-slide="prev">
+
+<span class="fa fa-chevron-left" style="position:absolute; top:60%;"></span>
+
+<span class="sr-only">Previous</span>
+
+</a>
+
+<a class="right carousel-control hidden-xs" href="#myCarousel" data-slide="next">
+
+<span class="fa fa-chevron-right" style="position:absolute; top:60%;"></span>
+
+<span class="sr-only">Next</span>
+
+</a>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<link href="https://storage.googleapis.com/swayam2_central/assets/css/swayam_css/announcement_flash.css" rel="stylesheet">
+
+<div class="announcement_section">
+
+<div class="container announcement_box_center">
+
+<div class="row announcement_box text-center">
+
+
+
+
+
+<div>
+
+<div class="announcement_inner_box" style="height: 96px; width: 192px;">
+
+
+
+<a href="https://swayam.gov.in/explorer?category=ARPIT" class="announcementFocus"/>
+
+
+
+</a>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div>
+
+<div class="announcement_inner_box" style="height: 96px; width: 192px;">
+
+
+
+<a target="_blank" href="https://nptel.ac.in/Translation/" class="announcementFocus"/>
+
+
+
+</a>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div>
+
+<div class="announcement_inner_box" style="height: 96px; width: 192px;">
+
+
+
+<a target="_blank" href="https://storage.googleapis.com/uniquecourses/course.html" class="announcementFocus"/>
+
+
+
+</a>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div>
+
+<div class="announcement_inner_box" style="height: 96px; width: 192px;">
+
+
+
+<a target="_blank" href="https://mhrd.gov.in/ict-initiatives" class="announcementFocus"/>
+
+
+
+</a>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div>
+
+<div class="announcement_inner_box" style="height: 96px; width: 192px;">
+
+
+
+<a href="https://storage.googleapis.com/uniquecourses/online.html" class="announcementFocus blinkingAnnouncement"/>
+
+
+
+</a>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<style>
+
+.carouselh1 {
+
+font-size:24px;
+
+line-height:30px;
+
+color:#FFFFFF;
+
+opacity:0.6;
+
+margin-top:60px;
+
+font-family:Roboto-Thin;
+
+}
+
+.carouselh2{
+
+font-size:40px;
+
+line-height:60px;
+
+color:#FFFFFF;
+
+font-family:Roboto-Thin;
+
+margin-bottom:34px;
+
+margin-top: 18px;
+
+}
+
+.mcarouselh1{
+
+font-size:14px;
+
+font-weight:100;
+
+line-height:30px;
+
+color:#FFFFFF;
+
+opacity:0.7;
+
+margin-top:85px;
+
+letter-spacing:1px;
+
+padding-left:0px;
+
+margin-left:0px;
+
+}
+
+.mcarouselh2{
+
+font-size:30px;
+
+font-weight:100;
+
+line-height:36px;
+
+color:#FFFFFF;
+
+margin-bottom:20px
+
+}
+
+.carouselAnnouncements {
+
+z-index: 100;
+
+position: absolute;
+
+top: 15px;
+
+text-align: center;
+
+width: 100%;
+
+}
+
+@media (max-width: 767px) and (min-width: 513px){
+
+.carouselAnnouncements{
+
+top: 55px;
+
+}
+
+.smallMobileAnnouncement{
+
+margin-top:30px;
+
+}
+
+}
+
+@media (max-width: 512px) {
+
+.carouselAnnouncements{
+
+top: 80px;
+
+}
+
+.smallMobileAnnouncement{
+
+margin-top:55px;
+
+}
+
+}
+
+
+
+
+
+.announcement_section{
+
+background: url(https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/Slider/swayam_announcement_bkgd_tile.png) repeat fixed center;
+
+min-height: 160px;
+
+border-top: 8px solid #333333;
+
+}
+
+
+
+.announcement_box{
+
+display: inline-flex;
+
+padding-top: 32px;
+
+padding-bottom: 32px;
+
+}
+
+
+
+div.announcement_box_center{
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+}
+
+
+
+.announcement_inner_box{
+
+width: 192px;
+
+height: 96px;
+
+background-color: #ffff66;
+
+margin: 0 20px;
+
+display: inline-flex;
+
+justify-content: center;
+
+align-items: center;
+
+-moz-box-shadow: 4px 4px 4px #333333;
+
+-webkit-box-shadow: 4px 4px 4px #333333;
+
+box-shadow: 4px 4px 4px #333333;
+
+}
+
+
+
+.announcement_inner_box a{
+
+font-size: 14px;
+
+color: #333333;
+
+}
+
+
+
+.announcementFocus{
+
+height: inherit;
+
+width: inherit;
+
+display: inline-flex;
+
+justify-content: center;
+
+align-items: center;
+
+}
+
+
+
+@media (max-width: 991px) and (min-width: 768px){
+
+.announcement_inner_box{
+
+height: 80px;
+
+width: 160px;
+
+margin: 0 10px;
+
+}
+
+.announcement_box{
+
+padding-top: 30px;
+
+}
+
+.announcement_section{
+
+min-height: 140px;
+
+}
+
+}
+
+
+
+@media (max-width: 767px){
+
+.announcement_inner_box{
+
+margin-bottom: 20px;
+
+}
+
+.announcement_box{
+
+padding-top: 20px;
+
+padding-bottom: 0;
+
+display: block;
+
+}
+
+}
+
+
+
+</style>
+
+<script>
+
+var announcement_count = 5;
+
+
+
+function setAnnouncementBox(x){
+
+switch(announcement_count){
+
+case 5:
+
+if (x.matches){
+
+$(".announcement_inner_box").css("height","65px").css("width","130px");
+
+$(".announcement_inner_box > a").css("font-size","12px");
+
+}else{
+
+$(".announcement_inner_box").css("height","80px").css("width","160px");
+
+$(".announcement_inner_box > a").css("font-size","14px");
+
+}
+
+break;
+
+default:
+
+if (x.matches){
+
+$(".announcement_inner_box").css("height","80px").css("width","160px");
+
+}else{
+
+$(".announcement_inner_box").css("height","96px").css("width","192px");
+
+}
+
+}
+
+}
+
+
+
+var x = window.matchMedia("(max-width: 991px) and (min-width: 768px)");
+
+setAnnouncementBox(x); // Call listener function at run time
+
+x.addListener(setAnnouncementBox); // Attach listener function on state changes
+
+
+
+</script>
+
+
+
+<br />
+
+<div class="container visible-lg visible-md">
+
+<h3 class="text-center"><b>ABOUT THE APPLICATION</b></h3>
+<h0>The PBF is a web application which deals with the planning, budgeting and forecasting of various real time projects handled by the government. Designed for the smooth interpreting of the expenditures from minimum to maximum, this application performs budget forecasting for short and long term goals.
+</h0>
+<br />
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center">
+
+<tr>
+
+
+
+
+
+<!--<td>
+
+<a href="nc_details/AICTE">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/AICTE_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+AICTE
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/CEC">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/CEC-logo.png" width="72px" height="72px"/>
+
+</a></br>
+
+CEC
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/IGNOU">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/IGNOU-logo.png" width="72px" height="72px"/>
+
+</a></br>
+
+IGNOU
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/IIMB">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/IIMB_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+IIMB
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/NCERT">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/NCERT_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+NCERT
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/NIOS">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/NIOS_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+NIOS
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/NITTTR">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/NITTTR_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+NITTTR
+
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/NPTEL">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/NPTEL_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+NPTEL
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/UGC">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/UGC_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+UGC
+
+</td>
+
+
+
+
+
+</tr>-->
+
+</table>
+
+</div>
+
+
+
+<div class="container visible-sm visible-xs">
+
+<h3 class="text-center">NATIONAL COORDINATORS</h3>
+
+<div id="about-slider">
+
+<div id="carousel-slider" class="carousel slide" data-ride="carousel">
+
+<div class="carousel-inner">
+
+
+
+
+
+
+
+<div class="item active">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center">
+
+<tr>
+
+
+
+<td>
+
+<a href="nc_details/AICTE">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/AICTE_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+AICTE
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/CEC">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/CEC-logo.png" width="72px" height="72px"/>
+
+</a></br>
+
+CEC
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/IGNOU">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/IGNOU-logo.png" width="72px" height="72px"/>
+
+</a></br>
+
+IGNOU
+
+</td>
+
+
+
+</tr>
+
+</table>
+
+</div>
+
+
+
+
+
+
+
+<div class="item">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center">
+
+<tr>
+
+
+
+<td>
+
+<a href="nc_details/IIMB">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/IIMB_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+IIMB
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/NCERT">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/NCERT_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+NCERT
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/NIOS">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/NIOS_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+NIOS
+
+</td>
+
+
+
+</tr>
+
+</table>
+
+</div>
+
+
+
+
+
+
+
+<div class="item">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center">
+
+<tr>
+
+
+
+<td>
+
+<a href="nc_details/NITTTR">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/NITTTR_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+NITTTR
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/NPTEL">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/NPTEL_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+NPTEL
+
+</td>
+
+
+
+<td>
+
+<a href="nc_details/UGC">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/NC_logo/UGC_logo_128.png" width="72px" height="72px"/>
+
+</a></br>
+
+UGC
+
+</td>
+
+
+
+</tr>
+
+</table>
+
+</div>
+
+
+
+
+
+
+
+<div class="item">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center">
+
+<tr>
+
+
+
+</tr>
+
+</table>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<br />
+
+
+
+<div class="container"><hr />
+
+<div class="row">
+
+<h3 style="text-align:center;"><b>PBF Benefits</b></h3>
+
+<!--Row 01 [START]-->
+
+<div class="row rowstyle">
+
+
+
+<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+
+<div class="bluetext">Helps in reduction of manual human work to analyse various aspects of planning, budgeting and forecasting.<br />
+
+Instructors</div>
+
+<br />
+
+<div class="graytext"> <br />
+
+</div>
+
+<!--<button class="btn btn-outline btn-lg">Know More</button>-->
+
+</div>
+
+
+
+<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/Slider/instructor.png" width="100%"></div>
+
+
+
+</div>
+
+<!--Row 01 [END]-->
+
+
+
+<!--Row 02 [START]-->
+
+
+
+<div class="row rowstyle">
+
+
+
+<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/Slider/assignments.png" /></div>
+
+
+
+<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+
+<div class="bluetext"> Used to determine how govt should allocate their budgets for a future period<br />
+
+
+
+</div>
+
+<br />
+
+<!--<div class="graytext">Ensuring your progress<br />-->
+
+
+
+<!--in timely manner.</div>-->
+
+<!--<button class="btn btn-outline btn-lg">Know More</button>-->
+
+</div>
+
+
+
+</div>
+
+
+
+<!--Row 02 [END]-->
+
+
+
+<!--Row 03 [START]-->
+
+
+
+<!--<div class="row rowstyle">
+
+
+
+<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+
+<div class="bluetext">Proctored <br />
+
+
+
+Exams</div>
+
+<br />
+
+<div class="graytext">Channelized through<br />
+
+
+
+our authorized partners.</div>
+
+<button class="btn btn-outline btn-lg">Know More</button>-->
+
+<!--</div>
+
+
+
+<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/Slider/proctored_exam.png" /></div>
+
+
+
+</div>
+
+
+
+Row 03 [END]
+
+
+
+Row 04 [START]
+
+
+
+<div class="row rowstyle">
+
+
+
+<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/Slider/credits_transfer.png" /></div>
+
+
+
+<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+
+<div class="bluetext">Easy<br />
+
+
+
+Credit Transfer</div>
+
+<br />
+
+<div class="graytext">Complementing your<br />
+
+
+
+academic program.</div>
+
+<button class="btn btn-outline btn-lg">Know More</button>-->
+
+<!--</div>
+
+
+
+</div>-->
+
+
+
+<!--Row 04 [END]-->
+
+
+
+<!--Row 05 [START]-->
+
+
+
+<div class="row rowstyle">
+
+
+
+<!--<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+
+<div class="bluetext">Active<br />
+
+
+
+Local Chapters</div>
+
+<br />
+
+<div class="graytext">Enhancing effectiveness of MOOCs <br />
+
+
+
+(Massive Online Open Courses).</div>
+
+<button class="btn btn-outline btn-lg">Know More</button>
+
+</div>
+
+
+
+<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/Slider/local_chapter.png" /></div>
+
+
+
+</div>-->
+
+
+
+<!--Row 05 [END]-->
+
+
+
+<!--Row 06 [START]-->
+
+
+
+<!--<div class="row rowstyle">
+
+
+
+<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/Slider/systematic_approach.png" /></div>
+
+
+
+<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+
+<div class="bluetext">Systematic<br />
+
+
+
+Approach</div>
+
+<br />
+
+<div class="graytext">Enabling you towards<br />
+
+
+
+desired learning goals.</div>
+
+<button class="btn btn-outline btn-lg">Know More</button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+</div>
+
+<br />-->
+
+
+
+<!--<h3 style="text-align:center;">Success Stories</h3>
+
+<br />
+
+<div class="container">
+
+
+
+<div class="row visible-xs">
+
+
+
+<div class="col-lg-3 col-md-3 col-md-6 col-xs-12">
+
+<div><img src="https://storage.googleapis.com/swayam-node2-production.appspot.com/Testimonials/Manish%20sharma.jpeg" width="72" height="72" class="img-circle"></div>
+
+<h4 style="margin-bottom:0px"> Manish Sharma</h4>
+
+<p>Indian Oil Corporation Limited</p>
+
+<p>Yes! NPTEL lectures are good for GATE preparation.
+
+The Good Points: Lectures made by senior IIT professors,Concept explanation is good,Detailed explanation,You can watch the same lecture again in case of doubt,You will find everything that might be asked in GATE.</p>
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="row visible-sm">
+
+
+
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+
+<div><img src="https://storage.googleapis.com/swayam-node2-production.appspot.com/Testimonials/Manish%20sharma.jpeg" width="72" height="72" class="img-circle"></div>
+
+<h4 style="margin-bottom:0px"> Manish Sharma</h4>
+
+<p>Indian Oil Corporation Limited</p>
+
+<p>Yes! NPTEL lectures are good for GATE preparation.
+
+The Good Points: Lectures made by senior IIT professors,Concept explanation is good,Detailed explanation,You can watch the same lecture again in case of doubt,You will find everything that might be asked in GATE.</p>
+
+</div>
+
+
+
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+
+<div><img src="https://storage.googleapis.com/swayam-node2-production.appspot.com/Testimonials/Deepak%20kumat%20tiwari.jpeg" width="72" height="72" class="img-circle"></div>
+
+<h4 style="margin-bottom:0px"> Deepak Kumar Tiwary</h4>
+
+<p>Software Development Engineer in Test (SDET) at IBM</p>
+
+<p>Today I took the certification exam for the course “The joy of computing using Python”, after completing the course.The course is designed remarkably. 
+
+Everything covered is very useful and can be applied in real life scenarios. Though the application of python is covered on very high level, it still gives you enough kick to start with.
+
+The course is divided into different sections with name as “Cool Ideas i (where i in range (1,10). Ideas are really cool. I work at IBM specialised in ETL and Automation Testing. 
+
+The course has designed weekly programming assignment which helps you apply your learning directly.And at the end you get to take the certification exam</p>
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="row visible-lg visible-md">
+
+
+
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+<div><img src="https://storage.googleapis.com/swayam-node2-production.appspot.com/Testimonials/Manish%20sharma.jpeg" width="72" height="72" class="img-circle"></div>
+
+<h4 style="margin-bottom:0px"> Manish Sharma</h4>
+
+<p>Indian Oil Corporation Limited</p>
+
+<p>Yes! NPTEL lectures are good for GATE preparation.
+
+The Good Points: Lectures made by senior IIT professors,Concept explanation is good,Detailed explanation,You can watch the same lecture again in case of doubt,You will find everything that might be asked in GATE.</p>
+
+</div>
+
+
+
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+<div><img src="https://storage.googleapis.com/swayam-node2-production.appspot.com/Testimonials/Deepak%20kumat%20tiwari.jpeg" width="72" height="72" class="img-circle"></div>
+
+<h4 style="margin-bottom:0px"> Deepak Kumar Tiwary</h4>
+
+<p>Software Development Engineer in Test (SDET) at IBM</p>
+
+<p>Today I took the certification exam for the course “The joy of computing using Python”, after completing the course.The course is designed remarkably. 
+
+Everything covered is very useful and can be applied in real life scenarios. Though the application of python is covered on very high level, it still gives you enough kick to start with.
+
+The course is divided into different sections with name as “Cool Ideas i (where i in range (1,10). Ideas are really cool. I work at IBM specialised in ETL and Automation Testing. 
+
+The course has designed weekly programming assignment which helps you apply your learning directly.And at the end you get to take the certification exam</p>
+
+</div>
+
+
+
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+<div><img src="https://storage.googleapis.com/swayam-node2-production.appspot.com/Testimonials/Aditya%20Vignesh.png" width="72" height="72" class="img-circle"></div>
+
+<h4 style="margin-bottom:0px">Aditya Vignesh</h4>
+
+<p>Integrated Test Range, DRDO, Balasore, Odisha</p>
+
+<p>First of all, I would like to thank all the coordinating instituions of NPTEL for creating such a wonderful platform. It gave me an opportunity to learn the subjects across disciplines. It was like sitting in the classroom of the professor of best institutions in the world. They delivered their research experience within the short period. This has paved the way for the digital era in India. Last but not the least, NPTEL has enlightened my life.&#34;</p>
+
+</div>
+
+
+
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+<div><img src="https://storage.googleapis.com/swayam-node2-production.appspot.com/Testimonials/Suresh%20Chandra.png" width="72" height="72" class="img-circle"></div>
+
+<h4 style="margin-bottom:0px">Suresh Chandra HS</h4>
+
+<p>QUEST, Bangalore</p>
+
+<p>I am a Director at QUEST, in Bangalore and at 53+, am thrilled at my &#34;academic&#34; performance. Truly, the grey-cells are still active! I have a Bachelors degree in Electronics(RVCE-Bangalore) and a Masters in Telecommunications and Software Engineering from BITS, Pilani. I have worked on Alcatel, Motorola and Cisco projects as a senior Project Manager.
+
+This is turning out to be an amazing learning experience for me at 53+ ! 
+
+I have 15 NPTEL Certifications,as on date. I have a passion for life-long learning !</p>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+<br />
+
+
+
+<!--<div class="text-center">-->
+
+<!--<a href="#">-->
+
+<!--<button type="submit" name="submit" class="btn btn-outline btn-lg" required="required">See All Testimonials</button>-->
+
+<!--</a>-->
+
+<!--</div>-->
+
+<br/>
+
+
+
+
+
+<br />
+
+
+
+<style>
+
+.graytext
+
+{
+
+font-size:16px;
+
+font-weight:300;
+
+line-height:24px;
+
+color:#666666;
+
+}
+
+.bluetext{
+
+font-size:36px;
+
+font-weight:300;
+
+line-height:48px;
+
+color:#0099CC;
+
+}
+
+.rowstyle{
+
+margin:5% 15%;
+
+border-bottom:#CCCCCC 1px solid;
+
+}
+
+</style>
+
+
+
+<section class="main">
+
+<section id="social">
+
+<div class="container">
+
+
+
+<div class="row appcontainer">
+
+<!--<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="padding-top:12px"> <img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/social_GOI.jpg" /> </div>-->
+
+<!--<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/mhrd_logo.png" style="margin-top:12px" />
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/swayam_logo.png" style="margin-top: 24px;margin-left: 20px;" />
+
+</div>
+
+<div class="col-md-1"></div>
+
+<div class="col-lg-4 col-md-4 col-sm-7 col-xs-12" style="font-size:11px; color:#666666; line-height:14px;">
+
+<h4>DOWNLOAD APP</h4>
+
+<div><a href="https://itunes.apple.com/in/app/swayam-online-education/id1146833429?mt=8"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/download_app_store_logo.png" /></a></div>
+
+<div><a href="https://play.google.com/store/apps/details?id=in.gov.swayam.app"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/download_google_play_logo.png" /></a></div>
+
+<!--<div><a href="https://www.microsoft.com/en-in/store/p/swayam/9nblggh4xxml"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/download_windows_store_logo.png" /></a></div>-->
+
+
+
+</div>
+
+
+
+<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 ">
+
+<!--<h4>FOLLOW US</h4>
+
+<img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/social.jpg" />-->
+
+<!--<ul class="social_icons">
+
+<li><a href="https://www.facebook.com/swayammoocs/"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/icon_social/icon_facebook_selected.png" class="facebook"/></a></li>
+
+<li><a href="https://www.instagram.com/swayammhrd/"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/icon_social/icon_instagram_selected.png" class="instagram"/></a></li>
+
+<li><a href="#"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/icon_social/icon_linkedin_selected.png" class="linkedin"/></a></li>
+
+<li><a href="https://twitter.com/SWAYAMMHRD"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/icon_social/icon_twitter_selected.png" class="twitter"/></a></li>-->
+
+<!--<li><a href="#"><img src="https://storage.googleapis.com/swayam2_central/assets/img/swayam_images/icon_social/icon_youtube_selected.png" class="youtube"/></a></li>-->
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+<section id="legal">
+
+<!--<div class="container">
+
+
+
+<div class="row">
+
+<div class="col-md-6 col-sm-6 col-xs-12">-->
+
+
+
+<!--<a href="/privacy_policy">Privacy Policy</a> <span>|</span> <a href="/terms_of_use">Terms of Use</a> <span>|</span> <a href="/honor_code">Honor Code</a> <span style="display:none">|</span> <a href="#" style="display:none">FAQs</a></div>
+
+
+
+<div class="col-md-6 col-sm-6 col-xs-12 helpline">Helpline : 1 800 121 9025 <span>|</span> email : support@swayam.gov.in </div>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+/#bottom-->
+
+<!--<footer id="footer">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-sm-6"> &copy; 2019 SWAYAM. All rights reserved. </div>
+
+<div class="col-sm-6">
+
+<div class="pull-right"> Initiative by : MHRD ( Govt of India) </div>
+
+</div>
+
+</div>
+
+</div>-->
+
+</footer>
+
+<!--/#footer-->
+
+</section>
+
+<style>
+
+.main{
+
+position: absolute;
+
+bottom: 0px;
+
+width: 100%;
+
+}
+
+@media (max-width: 767px) {
+
+body{
+
+padding-bottom: 400px;
+
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+body{
+
+padding-bottom: 240px;
+
+}
+
+}
+
+@media (min-width: 992px) {
+
+body{
+
+padding-bottom: 175px;
+
+}
+
+}
+
+
+
+</style>
+
+<script>
+
+$('.carousel').carousel({
+
+interval: 5000
+
+})
+
+</script>
+
+
+
+
+
+<script>
+
+$(document).ready(function(){
+
+$('[data-toggle="tooltip"]').tooltip();
+
+});
+
+
+
+$(document).ready(function() {
+
+
+
+$(".CheckboxContainer .container").click(function(){
+
+
+
+$("input[type='checkbox']").click(function(e){
+
+
+
+$div = $(this).parent();
+
+text = $div[0].firstChild.nodeValue;
+
+id_text = text.replace(/\s+/g, "");
+
+id_text = id_text.replace("&", "_");
+
+
+
+if($(this).prop("checked") == true){
+
+$(".sf-filtertags ul").prepend("<li>"+text+"<a href='#' name='"+text+"' id='"+id_text+"' onclick='removeTagAndUncheck(this.id,this.name)'> X </a></li>");
+
+}
+
+else{
+
+$("#"+id_text).parent().remove();
+
+}
+
+
+
+clearAllShowHide();
+
+e.stopImmediatePropagation();
+
+});
+
+});
+
+
+
+$('.dropdown-submenu a.submenu').on("click", function(e){
+
+$.each($(".dropdown-submenu div.dropdown-menu"), function(){
+
+if($(this).is(":visible")) {
+
+if( $( "div" ).index( $(this).parent() ) != $( "div" ).index( $(e.target).next('div.dropdown-menu').parent() ) ){
+
+$(this).css("display","none");
+
+$(this).parent().find("i").removeClass("fa-angle-right");
+
+$(this).parent().find("i").addClass("fa-angle-down");
+
+}
+
+}
+
+});
+
+
+
+$(e.target).next('div').toggle();
+
+
+
+if(($(e.target).next('div')).is( ":visible" )){
+
+$(e.target).find("i").removeClass("fa-angle-down");
+
+$(e.target).find("i").addClass("fa-angle-right");
+
+}
+
+else{
+
+$(e.target).find("i").removeClass("fa-angle-right");
+
+$(e.target).find("i").addClass("fa-angle-down");
+
+}
+
+e.stopPropagation();
+
+e.preventDefault();
+
+});
+
+
+
+$(".dropdown").on("show.bs.dropdown", function(event){
+
+$( event.target).find("div.dropdown-menu").css("display","table") ;
+
+$(event.target).find("i").removeClass("fa-angle-right");
+
+$(event.target).find("i").addClass("fa-angle-down");
+
+});
+
+$(".dropdown").on("shown.bs.dropdown", function(){
+
+$('.dropdown-submenu a.submenu').next('div').toggle();
+
+});
+
+$(".dropdown").on("hide.bs.dropdown", function(event){
+
+$( event.target).find("div.dropdown-menu").css("display","none") ;
+
+});
+
+});
+
+
+
+function clearAllShowHide(){
+
+if ( $('.sf-filtertags ul li').length > 2 ) {
+
+$("#clearAllTags").css("visibility","visible");
+
+}else{
+
+$("#clearAllTags").css("visibility","hidden");
+
+}
+
+}
+
+
+
+function removeTagAndUncheck(id, name){
+
+$("input[name='"+name.trim()+"']:checkbox").prop('checked', false);
+
+$("#"+id).parent().remove();
+
+clearAllShowHide();
+
+}
+
+
+
+function clearAllTags(){
+
+$('.sf-filtertags ul').empty();
+
+$('.sf-filtertags ul').prepend('<li id="clearAllTags" style="border:none;visibility: hidden;" onclick="clearAllTags()"><a href="#">Clear All</a></li>');
+
+$('input:checkbox').removeAttr('checked');
+
+clearAllShowHide();
+
+}
+
+
+
+//Hide Dropdown popover on out-focus
+
+$(document).on("focusin", function(event){
+
+var $trigger = $(".dropdown");
+
+if($trigger !== event.target && !$trigger.has(event.target).length){
+
+$(".dropdown-menu").slideUp("fast");
+
+}
+
+});
+
+
+
+$(window).click(function() {
+
+$(".dropdown-menu").slideUp("fast");
+
+});
+
+</script>
+
+
+
+<script>
+
+$('a').click(function(){
+
+if($(this).text().trim() == 'Show More' ){
+
+$(this).html('Show Less <i class="fa fa-chevron-up"></i>');
+
+}
+
+else if($(this).text().trim() == 'Show Less' ){
+
+$(this).html('Show More <i class="fa fa-chevron-down"></i>');
+
+}
+
+});
+
+</script>
+
+
+
+</body>
+
+</html>
+

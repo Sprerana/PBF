@@ -1,0 +1,58 @@
+<html>
+{% load static %}
+<head>
+
+<link rel="stylesheet" href="{% static 'budget_item_css.css' %}”>
+
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
+<div id="logo">
+</head>
+
+  <center>
+      <h1>Standard Budget Item</h1>
+  </center>
+</div>
+
+<div id="cHolder">
+<form METHOD="GET" TARGET="_self">
+
+  <label for="gName">Select Budget Item:</label>
+  <select id="gName" class="gName" name="gName">
+    <option value="0" id="empty" name="empty">Select</option>
+    <option value="15" id="books" name="books">Books</option>
+    <option value="60" id="medo" name="Medicine">Medicine</option>
+  </select>
+  Cost:
+  <input type="text" id="spfPrice" readonly />
+  <br>
+  <br>
+   <label for="width">Description:</label>
+  <input type="text" id="width" name="width" />
+  <br>
+ 
+  <br>
+  <label for="width">Unit of measure:</label>
+  <input type="text" id="width" name="width" />
+  <br>
+  <br>
+<label for="sQty">Quantity:</label>
+  <select id="sQty" name="sQty" class="sQty">
+    <option value="0" id="empty" name="empty">Select</option>
+    <option value="1" id="one" name="one">1</option>
+    <option value="2" id="two" name="two">2</option>
+     <option value="3" id="three" name="three">3</option>
+    <option value="4" id="four" name="four">4</option>
+     <option value="5" id="five" name="five">5</option>
+    <option value="6" id="six" name="six">6</option>
+  </select>
+  <br>
+  <br>
+ 
+  <input type="button" name="cForm" class="button" id="cForm" value="Result"  />
+ 
+   <br>
+</form>
+</div>
+</html>

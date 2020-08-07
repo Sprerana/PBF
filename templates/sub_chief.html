@@ -1,0 +1,589 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Chief Portal Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .button {
+  background-color: #C0C0C0;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 10%;
+  height: 4000px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 4000px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<!--<h2>CSS Layout Float</h2>
+<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>-->
+
+<header>
+  <img src="{% static 'logo.png' %}">
+  <div style = "position:absolute; left:1630px; top:30px;">
+  <button class="button">Logout</button>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">London</a></li>
+      
+    </ul>
+  </nav>
+  
+  <article>
+   
+    <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% load static %}
+
+<script src="{% static '3.js' %}"></script>
+<link rel="stylesheet" href="https://code.jquery.com/jquery-1.12.4.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js">
+<link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jqc-1.12.3/jqc-1.12.3/dt-1.10.16/b-1.4.2/b-colvis-1.4.2/b-html5-1.4.2/cr-1.4.1/fc-3.2.3/fh-3.1.3/r-2.2.0/rr-1.2.3/sc-1.4.3/datatables.min.js">
+<link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jqc-1.12.3/jqc-1.12.3/dt-1.10.16/b-1.4.2/b-colvis-1.4.2/b-html5-1.4.2/cr-1.4.1/fc-3.2.3/fh-3.1.3/r-2.2.0/rr-1.2.3/sc-1.4.3/datatables.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<!--<h2>ADMIN</h2>
+<p>Click on the buttons inside the tabbed menu:</p>-->
+
+<div class="tab">
+  
+  <button class="tablinks" onclick="openCity(event, 'year_type')">Budget Year Type</button>
+  <button class="tablinks" onclick="openCity(event, 'calendar')">Budget Calendar</button>
+  <button class="tablinks" onclick="openCity(event, 'budget_item')">Standard Budget Item</button>
+  <button class="tablinks" onclick="openCity(event, 'group_categories')">Budget Group categories</button>
+  <button class="tablinks" onclick="openCity(event, 'Worksheet')">Define Worksheet</button>
+
+  <!--<button class="tablinks" onclick="openCity(event, 'group_categories')"></button>-->
+</div>
+<div id="group_categories" class="tabcontent">
+<p><b>Define  Budget Group Category</b></p>
+<table id="table_id" class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+              <th><b>No.</b></th>
+              <th><b>Field</b></th>
+              <th><b>Value</b></th>
+               
+                
+            </tr>
+        </thead>
+        <tbody>
+           <!-- <tr>
+                <td class="text-center">01</td>
+                <td>Budegt Category Set</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+               
+            </tr>-->
+            <tr>
+                <td class="text-center">01</td>
+                <td>Budget Category Name</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+            </tr>
+            <tr>
+                <td class="text-center">02</td>
+                <td>Account No</td>
+              
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+              
+            </tr>
+            <!--<tr>
+                <td class="text-center">04</td>
+                <td>sequence</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>-->
+           <tr>
+             <td colspan="3"><center><button name="button_category" type="button">Submit</button></center></td>
+                
+              
+            </tr>
+            
+        </tbody>
+
+        <tfood>
+            <tr>
+              
+               
+                
+                
+            
+            </tr>
+        </tfood>
+    </table>
+     <p><b>List of Budget Categories</b></p>
+ </div>
+
+
+<div id="Worksheet" class="tabcontent">
+
+</div>
+<div id="year_type" class="tabcontent">
+
+  
+ 
+  <h3>Create a new budget year type</h3>
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10">
+    <table id="table_id" class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+              <th><b>No.</b></th>
+              <th><b>Field</b></th>
+              <th><b>Value</b></th>
+               
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">01</td>
+                <td>Name</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+               
+            </tr>
+            <tr>
+                <td class="text-center">02</td>
+                <td>Description</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+            </tr>
+            <tr>
+                <td class="text-center">03</td>
+                <td>year type
+              </td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+              
+            </tr>
+            <tr>
+                <td class="text-center">04</td>
+                <td>sequence</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+           <tr>
+             <td colspan="3"><center><button name="button_prior" type="button">Submit</button></center></td>
+                
+              
+            </tr>
+            
+        </tbody>
+        <tfood>
+            <tr>
+              
+               
+                
+                
+            
+            </tr>
+        </tfood>
+    </table>
+     <h3>View previous Budget Year Types</h3>
+     <p> <a href="http://127.0.0.1:8000/admin_portal">Budget Year Type-1</a></p>
+<p> <a href="tag_a.asp">Budget Year Type-2</a></p>
+<p> <a href="https://www.w3schools.com">Budget Year Type-3</a></p>
+<p> <a href="tag_a.asp">Budget Year Type-4</a></p>
+
+  </div>
+</div>
+<hr>
+</div>
+
+
+<div>
+<div id="calendar" class="tabcontent">
+  <!--<h3>Paris</h3>
+  <p>Paris is the capital of France.</p>-->
+  <h3>Create budget calendar</h3>
+  
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10">
+    <table id="table_id" class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+              <th><b>No.</b></th>
+              <th><b>Field</b></th>
+              <th><b>Value</b></th>
+               
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">01</td>
+                <td>Name</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+               
+            </tr>
+            <tr>
+                <td class="text-center">02</td>
+                <td>Year Name</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+            </tr>
+            <tr>
+                <td class="text-center">03</td>
+                <td>Year Type
+              </td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+              
+            </tr>
+            <tr>
+                <td class="text-center">04</td>
+                <td>Year Date Range</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+            <tr>
+                <td class="text-center">05</td>
+                <td>Period Distribution</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+            <tr>
+                <td class="text-center">06</td>
+                <td>Position Cost calculation</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+            <tr>
+                <td class="text-center">07</td>
+                <td>From</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+           <tr>
+                <td class="text-center">08</td>
+                <td>To</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+            </tr>
+           <tr>
+             <td colspan="3"><center><button name="button_prior" type="button">Submit</button></center></td>
+                
+              
+            </tr>
+            
+        </tbody>
+        <p><b>Prior Year</b></p>
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10">
+    <table id="table_id" class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+              <th><b>No.</b></th>
+              <th><b>Field</b></th>
+              <th><b>Value</b></th>
+               
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">01</td>
+                <td>Name</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+               
+            </tr>
+            <tr>
+                <td class="text-center">02</td>
+                <td>Year Name</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+            </tr>
+            <tr>
+                <td class="text-center">03</td>
+                <td>Year Type
+              </td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+              
+            </tr>
+            <tr>
+                <td class="text-center">04</td>
+                <td>Year Date Range</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+            <tr>
+                <td class="text-center">05</td>
+                <td>Period Distribution</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+            <tr>
+                <td class="text-center">06</td>
+                <td>Position Cost calculation</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+            <tr>
+                <td class="text-center">07</td>
+                <td>From</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+           <tr>
+                <td class="text-center">08</td>
+                <td>To</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+            </tr>
+           <tr>
+             <td colspan="3"><center><button name="button_current" type="button">Submit</button></center></td>
+                
+              
+            </tr>
+            
+        </tbody>
+        <p><b>Current Year</b></p>
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10">
+    <table id="table_id" class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+              <th><b>No.</b></th>
+              <th><b>Field</b></th>
+              <th><b>Value</b></th>
+               
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">01</td>
+                <td>Name</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+               
+            </tr>
+            <tr>
+                <td class="text-center">02</td>
+                <td>Year Name</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+            </tr>
+            <tr>
+                <td class="text-center">03</td>
+                <td>Year Type
+              </td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+              
+            </tr>
+            <tr>
+                <td class="text-center">04</td>
+                <td>Year Date Range</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+            <tr>
+                <td class="text-center">05</td>
+                <td>Period Distribution</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+            <tr>
+                <td class="text-center">06</td>
+                <td>Position Cost calculation</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+            <tr>
+                <td class="text-center">07</td>
+                <td>From</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+                
+                
+            </tr>
+           <tr>
+                <td class="text-center">08</td>
+                <td>To</td>
+                <td> <input type="text" id="fname" name="fname"><br><br></td>
+            </tr>
+           <tr>
+             <td colspan="3"><center><button name="button_proposed" type="button">Submit</button></center></td>
+                
+              
+            </tr>
+            
+        </tbody>
+        <p><b>Proposed Year</b></p>
+        <tfood>
+            <tr>
+              
+               
+                
+                
+            
+            </tr>
+        </tfood>
+    </table>
+  </div>
+</div>
+<hr>
+ 
+</div>
+
+<div id="budget_item" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
+    
+
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
